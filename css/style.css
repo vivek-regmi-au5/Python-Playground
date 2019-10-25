@@ -1,0 +1,136 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 100px;
+  line-height: 1.7;
+  color: #777777;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, #6fd574b4, #28b485b4),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  position: relative;
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 35px;
+}
+
+.logo:hover {
+  animation: moveInRight 1s;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  margin-bottom: 40px;
+  backface-visibility: hidden;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary-main {
+  display: block;
+  letter-spacing: 35px;
+  font-weight: 900px;
+  font-size: 40px;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.heading-primary-sub {
+  display: block;
+  letter-spacing: 16.4px;
+  font-weight: 100px;
+  font-size: 12px;
+
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.btn:link,
+.btn.visited {
+  text-decoration: none;
+  position: absolute;
+  border: 1px solid white;
+  letter-spacing: 15px;
+
+  font-weight: bold;
+  padding: 11px 33px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777777;
+}
+.btn:hover {
+  transform: translateY(-3px);
+}
+/* .btn:active {
+  transform: translateY(-1px);
+} */
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  80% {
+    transform: translateX(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  80% {
+    transform: translateX(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
